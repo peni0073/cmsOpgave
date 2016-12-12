@@ -47,6 +47,7 @@ article {
     height: auto;
     padding: 11%;
     border-radius: 6px;
+    border: 5px solid #fff;
 }
 
 .input-group {
@@ -69,6 +70,11 @@ article {
     margin-top: 0px;
 }
 
-.btn-default {
-    background-color: deeppink;
+.btn {
+    width: auto;
+}
+
+.btn-insert {
+    float: right;
+    margin-bottom: 20px;
 }

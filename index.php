@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +11,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,62 +66,87 @@
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-8">
-                        <article>                          
-                            <img src="img/img4.jpg" alt="Tattoo billede 1">
-                            <h3>Overskrift</h3>
-                            <p id="time"><?php $t=time(); echo(date("Y-m-d",$t)); ?>
-                            </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga. Reprehenderit, pariatur. Inventore nostrum aliquam, ratione veniam possimus odio, iste, molestias, assumenda quia nemo recusandae. Accusamus optio dolore autem consequuntur molestiae ut aspernatur veniam. Placeat magnam numquam hic atque enim aliquam voluptatum totam! Debitis tempora necessitatibus totam incidunt alias labore quisquam, nam dolor dolore, maxime, nostrum, enim ut commodi nisi impedit. Optio aliquam minus, in fugit, et deleniti officia dolorum dolores quo blanditiis iusto doloremque.</p>
-                            <hr>
-                        </article>
+                      
+                      
+                        <!-- FORMULAR til ARTICLES START -->
                         
-                        <article>
-                            <img src="img/img5.jpg" alt="Tattoo billede 2">
-                            <h3>Overskrift</h3>
-                            <p id="time">06. december 2016 11:12:37</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga. Reprehenderit, pariatur. Inventore nostrum aliquam, ratione veniam possimus odio, iste, molestias, assumenda quia nemo recusandae. Accusamus optio dolore autem consequuntur molestiae ut aspernatur veniam. Placeat magnam numquam hic atque enim aliquam voluptatum totam! Debitis tempora necessitatibus totam incidunt alias labore quisquam, nam dolor dolore, maxime, nostrum, enim ut commodi nisi impedit. Optio aliquam minus, in fugit, et deleniti officia dolorum dolores quo blanditiis iusto doloremque.</p>
-                            <hr>
-                        </article>
+                            <article class="col-md-12">
+                                <form action="insert.php" method="get" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="heading" class="control-label col-sm-4">
+                                            Artiklens overskrift her:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" id="heading" type="text" name="heading" placeholder="Overskrift her...">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imgSrc" class="control-label col-sm-4">
+                                            Billednavn:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" id="imgSrc" type="text" name="imgSrc" placeholder="Billednavn">
+                                        </div>                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imgAlt" class="control-label col-sm-4">
+                                            Alt tekst til billede:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" id="imgAlt" type="text" name="imgAlt" placeholder="Alt tekst til billede">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="articleText" class="control-label col-sm-4">
+                                            Artiklens tekst:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" id="articleText" type="text" name="articleText" placeholder="Tekst her..." rows="5"></textarea>
+                                        </div>
+                                    </div>  
+                                    <input type="submit" value="Indsæt artikel" class="btn btn-default btn-insert col-sm-2">          
+                                </form>
+                                
+                            </article>
                         
-                        <article>
-                            <img src="img/img3.jpg" alt="Tattoo billede 3">
-                            <h3>Overskrift</h3>
-                            <p id="time">06. december 2016 11:12:37</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga. Reprehenderit, pariatur. Inventore nostrum aliquam, ratione veniam possimus odio, iste, molestias, assumenda quia nemo recusandae. Accusamus optio dolore autem consequuntur molestiae ut aspernatur veniam. Placeat magnam numquam hic atque enim aliquam voluptatum totam! Debitis tempora necessitatibus totam incidunt alias labore quisquam, nam dolor dolore, maxime, nostrum, enim ut commodi nisi impedit. Optio aliquam minus, in fugit, et deleniti officia dolorum dolores quo blanditiis iusto doloremque.</p>
-                            <hr>
-                        </article>
+                        <!-- FORMULAR til ARTICLES SLUT -->
                         
-                        <article>
-                            <img src="img/img2.jpg" alt="Tattoo billede 4">
-                            <h3>Overskrift</h3>
-                            <p id="time">06. december 2016 11:12:37</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga. Reprehenderit, pariatur. Inventore nostrum aliquam, ratione veniam possimus odio, iste, molestias, assumenda quia nemo recusandae. Accusamus optio dolore autem consequuntur molestiae ut aspernatur veniam. Placeat magnam numquam hic atque enim aliquam voluptatum totam! Debitis tempora necessitatibus totam incidunt alias labore quisquam, nam dolor dolore, maxime, nostrum, enim ut commodi nisi impedit. Optio aliquam minus, in fugit, et deleniti officia dolorum dolores quo blanditiis iusto doloremque.</p>
-                            <hr>
-                        </article>
                         
-                        <article>
-                            <img src="img/img1.jpg" alt="Tattoo billede 5">
-                            <h3>Overskrift</h3>
-                            <p id="time">06. december 2016 11:12:37</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga. Reprehenderit, pariatur. Inventore nostrum aliquam, ratione veniam possimus odio, iste, molestias, assumenda quia nemo recusandae. Accusamus optio dolore autem consequuntur molestiae ut aspernatur veniam. Placeat magnam numquam hic atque enim aliquam voluptatum totam! Debitis tempora necessitatibus totam incidunt alias labore quisquam, nam dolor dolore, maxime, nostrum, enim ut commodi nisi impedit. Optio aliquam minus, in fugit, et deleniti officia dolorum dolores quo blanditiis iusto doloremque.</p>
-                            <hr>
-                        </article>
+                        <!-- ARTICLES START -->
+                        
+                        <?php include "fetchDb.php"; ?>
+                        
+                        <!-- ARTICLES SLUT -->
                     </div>
+                    
+                    <!-- LOGIN BOX START -->
                     <div class="col-sm-4">
                         <div class="row">
                             <div class="col-sm-6-offset-3 login-box">
-                                <div class="input-group">
-                                  <p>Brugernavn</p>
-                                  <input type="text" placeholder="Brugernavn" class="input">
-                                </div>
-                                <div class="input-group">
-                                  <p>Password</p>
-                                  <input type="text"placeholder="Password">
-                                </div>
-                                <button class="btn btn-default" type="button">Log ind</button>
+                                <form action="checkUser.php" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="user" class="col-sm-12">
+                                            Brugernavn:
+                                        </label>
+                                        <div class="col-sm-12">
+                                            <input class="form-control" id="user" type="text" name="formUsername" placeholder="Brugernavn">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass" class="col-sm-12">
+                                            Password:
+                                        </label>
+                                        <div class="col-sm-12">
+                                            <input class="form-control" id="pass" type="password" name="formPassword" placeholder="Password">
+                                        </div>                                        
+                                    </div>                                    
+                                    <input type="submit" value="Log ind" class="btn btn-default insert-btn col-sm-2">          
+                                </form>
                             </div>
                         </div>
                     </div>
+                    <!-- LOGIN BOX SLUT -->
+                    
                 </div>
             </div>
         </main>
